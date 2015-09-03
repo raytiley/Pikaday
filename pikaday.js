@@ -486,8 +486,11 @@
             if (isDate(date)) {
               self.setDate(date);
             }
-            if (!self._v) {
+            if (!self._v && opts.showOnInputChange) {
                 self.show();
+            }
+            if (opts.blurFieldOnInputChange) {
+              opts.field.blur();
             }
         };
 
